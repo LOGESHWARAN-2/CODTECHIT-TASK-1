@@ -1,1 +1,50 @@
+import java.util.*;
+
+public class Studentgradetracker {
+
+	public static void main(String[] args) {
+		Scanner obj =new Scanner(System.in);
+		System.out.println("Enter the Number of subjects:");
+		int nos=obj.nextInt();
+		
+	   int markofsub[]=new int[nos];
+	   int TotalMarks=0;
+	   
+	   System.out.println("Enter the each subject marks:");
+	   for(int i=0;i<nos;i++) {
+		   markofsub[i]=obj.nextInt();
+		   TotalMarks+=markofsub[i];
+		   
+	   }
+	   System.out.printf("Total mark of the %d subjects:%d\n",nos,TotalMarks);
+	   
+	   float average=TotalMarks/nos;
+	   System.out.printf("Average of %d subjects:%f\n",nos,average);
+	   
+	   if(average>=90 && average<=100) {
+		   System.out.println("You have passed in your exam.");
+		   System.out.println("O grade");
+	   }
+	   else if(average>=80 && average<=89) {
+		   System.out.println("You have passed in your exam.");
+		   System.out.println("A+ grade");
+	   }
+	   else if(average>=70 && average<=79) {
+		   System.out.println("You have passed in your exam.");
+		   System.out.println("A grade");
+	   }
+	   else if(average>=60 && average<=69) {
+		   System.out.println("You have passed in your exam.");
+		   System.out.println("B+ grade");
+	   }
+	   else if(average>=50 && average<=59) {
+		   System.out.println("You have passed in your exam.");
+		   System.out.println("B grade");
+	   }
+	   else {
+		   System.out.println("Fail");
+	   }
+	}
+
+}
 
